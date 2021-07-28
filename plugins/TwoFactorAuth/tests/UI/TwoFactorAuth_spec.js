@@ -25,9 +25,6 @@ describe("TwoFactorAuth", function () {
 
     async function loginUser(username, doAuth)
     {
-        testEnvironment.overrideConfig('General', 'login_allow_logme', '1')
-        testEnvironment.save();
-
         // make sure to log out previous session
         await page.goto(logoutUrl);
 
@@ -62,6 +59,7 @@ describe("TwoFactorAuth", function () {
     before(function () {
         testEnvironment.pluginsToLoad = ['TwoFactorAuth'];
         testEnvironment.queryParamOverride = { date: '2018-03-04' };
+        testEnvironment.overrideConfig('General', 'login_allow_logme', '1')
         testEnvironment.save();
     });
 
@@ -112,9 +110,6 @@ describe("TwoFactorAuth", function () {
     });
 
     it('when logging in through logme and verifying screen it works to access ui', async function () {
-        testEnvironment.overrideConfig('General', 'login_allow_logme', '1')
-        testEnvironment.save();
-
         await page.type('.loginTwoFaForm #login_form_authcode', '123456');
         await page.evaluate(function(){
             $('.loginTwoFaForm #login_form_submit').click();

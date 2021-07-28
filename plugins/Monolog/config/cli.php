@@ -23,7 +23,12 @@ return array(
             OutputInterface::VERBOSITY_DEBUG => Logger::DEBUG,
         );
         $handler = new ConsoleHandler(null, true, $verbosityMap);
-        $handler->setFormatter(new ConsoleFormatter($c->get('log.console.format'), null, true, true));
+        $options= [
+            'format' => $c->get('log.console.format'),
+            'multiline' => false,
+            'ignore_empty_context_and_extra' => true,
+        ];
+        $handler->setFormatter(new ConsoleFormatter($options));
         return $handler;
     },
     'log.console.format' => '%start_tag%%level_name% [%datetime%] %extra.request_id% %end_tag% %message%' . PHP_EOL,

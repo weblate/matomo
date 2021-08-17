@@ -89,8 +89,7 @@ matrix:
       dist: xenial
       sudo: false
 
-os: linux
-arch: arm64-graviton2
+virt: lxd
 dist: bionic
 
 script: $PIWIK_ROOT_DIR/tests/travis/travis.sh

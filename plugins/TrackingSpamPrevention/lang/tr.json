@@ -2,6 +2,7 @@
     "TrackingSpamPrevention": {
         "BanIpNotificationMailSubject": "Çok fazla işlem yapılan bir IP adresi engellendi.",
         "BlockCloudNoteInternetDisabled": "Matomo yapılandırmasında internet kapalı olduğundan bu özellik çalışmaz.",
+        "PluginDescription": "Bu eklenti, istenmeyen ileti gönderenlerin ve botların verilerinizi bozmasını önlemek için çeşitli seçenekler sunar. Böylece verilerinize yeniden güvenebilirsiniz.",
         "SettingBlockHeadlessDescription": "Kullanıcı arayüzü olmayan tarayıcılar vardır ve çoğunlukla otomasyon işlemleri için kullanılır. Yalnızca normal siteleriniz ve uygulamalarınız varsa, bu ayarın açılması güvenli olmalıdır. Başka şekilde belirlenemeyen ek bot ve spam isteklerini engelleyebilir.",
         "SettingBlockHeadlessTitle": "Başlıksız tarayıcılar engellensin",
         "SettingExcludedCountriesDescription": "Bu ülkelerden gelen ziyaretçiler izlenmez. Hedef alanınızın dışındaki ziyaretçiler muhtemelen bot veya spam göndereciler olacaktır veya bunu diğer yargı yetki alanlarındaki gizlilik yasalarından kaçınmak için kullanabilirsiniz.",
